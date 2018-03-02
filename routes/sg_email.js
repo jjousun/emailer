@@ -1,19 +1,19 @@
-function sendmailer(req, res) {
+function sendGridMailer(req, callback) {
   const sgMail = require('@sendgrid/mail');
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  sgMail.setApiKey();
   const msg = {
     to: req.body.email,
-    from: '',
+    from: 'test@example.com',
     subject: req.body.subject,
     text: req.body.message,
   };
   sgMail.send(msg, (error, result) => {
     if (error) {
-      res.send("SG email not sent aw");
+      callback(false);
     } else {
-      res.send("SG email sent successfully! Check your email woot");
+      callback(true);
     }
   });
 }
 
-module.exports = sendmailer;
+module.exports = sendGridMailer;
