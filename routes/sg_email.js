@@ -1,6 +1,6 @@
 function sendGridMailer(req, callback) {
   const sgMail = require('@sendgrid/mail');
-  sgMail.setApiKey();
+  sgMail.setApiKey('');
   const msg = {
     to: req.body.email,
     from: 'test@example.com',

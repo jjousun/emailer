@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from './form.js';
+import Tabber from './tabber.js';
 
 class App extends Component {
   render() {
@@ -9,7 +10,8 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Emailer</h1>
         </header>
-        <Form ></Form>
+        <Tabber>
+        </Tabber>
       </div>
     );
   }

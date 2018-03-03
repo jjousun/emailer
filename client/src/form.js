@@ -63,42 +63,42 @@ class Form extends Component {
 
   render () {
     return (
-      <div>
-      <div>
-        <input
-          onChange={this.handleEmailChange}
-          name="email"
-          className="EmailinputForm"
-          value={this.state.email}
-          placeholder="Enter the recipient email"
-        />
+      <div className="form">
+        <div className="emailInputContainer">
+          <input
+            onChange={this.handleEmailChange}
+            name="email"
+            className="EmailinputForm"
+            value={this.state.email}
+            placeholder="Enter the recipient email"
+          />
         </div>
-        <div>
-        <input
-          onChange={this.handleSubjectChange}
-          name="subject"
-          className="SubjectinputForm"
-          value={this.state.subject}
-          placeholder="Enter email subject line"
-        />
+        <div className="subjectInputContainer">
+          <input
+            onChange={this.handleSubjectChange}
+            name="subject"
+            className="SubjectinputForm"
+            value={this.state.subject}
+            placeholder="Enter email subject line"
+          />
         </div>
-        <div>
-        <textarea
-          onChange={this.handleMessageChange}
-          name="message"
-          className="MessageinputForm"
-          value={this.state.message}
-          placeholder="Type a message"
-        />
+        <div className="messageInputContainer">
+          <textarea
+            onChange={this.handleMessageChange}
+            name="message"
+            className="MessageinputForm"
+            value={this.state.message}
+            placeholder="Type a message"
+          />
         </div>
-        <div>
-        <button
-          className="submitbutton"
-          type="submit"
-          onClick={this.handleSubmit}
-        >
-        Send email!
-        </button>
+        <div className="submitButtonContainer">
+          <button
+            className="submitbutton"
+            type="submit"
+            onClick={this.handleSubmit}
+          >
+            Send email!
+          </button>
         </div>
       </div>
     )
