@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "client": "cd client && npm start",
+    "server": "nodemon ./bin/www",
+    "dev": "concurrently --kill-others \"npm run server\" \"npm run client\""
   },
   "dependencies": {
     "@sendgrid/mail": "^6.2.1",
@@ -14,6 +16,7 @@
     "mailgun-js": "^0.16.0",
     "morgan": "~1.9.0",
     "pug": "2.0.0-beta11",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "concurrently": "^3.5.0"
   }
 }

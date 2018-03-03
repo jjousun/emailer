@@ -4,10 +4,10 @@ var sendGridMailer = require('./sg_email');
 var mailGuner = require('./mg_email');
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Emailer app' });  
+  res.render('index', { title: 'Emailer app' });
 });
 
-router.post('/email', function(req, res, next) {
+router.post('/api/email', function(req, res, next) {
   sendGridMailer(req, function(result) {
     if (result) {
       console.log('Sent via SendGrid');
@@ -21,9 +21,9 @@ router.post('/email', function(req, res, next) {
           console.log('Both SG and MG APIs failed');
           res.send('Something went wrong!');
         }
-      })
+      });
     }
-  })
+  });
 });
 
 // Sendmail email
