@@ -64,40 +64,40 @@ class Form extends Component {
   render () {
     return (
       <div className="form">
-        <div className="emailInputContainer">
+        <div className="email-input-container">
           <input
             onChange={this.handleEmailChange}
             name="email"
-            className="EmailinputForm"
+            className="email-input-form"
             value={this.state.email}
-            placeholder="Enter the recipient email"
+            placeholder="Enter recipient email"
           />
         </div>
-        <div className="subjectInputContainer">
+        <div className="subject-input-container">
           <input
             onChange={this.handleSubjectChange}
             name="subject"
-            className="SubjectinputForm"
+            className="subject-input-form"
             value={this.state.subject}
-            placeholder="Enter email subject line"
+            placeholder="Enter subject line"
           />
         </div>
-        <div className="messageInputContainer">
+        <div className="message-input-container">
           <textarea
             onChange={this.handleMessageChange}
             name="message"
-            className="MessageinputForm"
+            className="message-input-form"
             value={this.state.message}
             placeholder="Type a message"
           />
         </div>
-        <div className="submitButtonContainer">
+        <div className="submit-button-container">
           <button
-            className="submitbutton"
+            className="submit-button"
             type="submit"
             onClick={this.handleSubmit}
           >
-            Send email!
+            Yes, send it!
           </button>
         </div>
       </div>

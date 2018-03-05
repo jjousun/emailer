@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Form from './form.js';
 import Tabber from './tabber.js';
 
 class App extends Component {

@@ -7,7 +7,7 @@ class Tabber extends Component {
     super();
     this.state = {
       isAboutHidden: true,
-      isFormHidden: false
+      isFormHidden: false,
     };
   }
 
@@ -27,26 +27,24 @@ class Tabber extends Component {
 
   render() {
     return (
-      <div className="tabContainer">
+      <div className="tab-container">
         <button
-          className="emailTab"
+          className="email-tab"
           type="submit"
           onClick={this.toggleForm.bind(this)}
         >
-          Send an email!
+          Send an email
         </button>
-
-
         <button
-          className="aboutTab"
+          className="about-tab"
           type="submit"
           onClick={this.toggleAbout.bind(this)}
         >
-          About!
+          About
         </button>
         <div className='content'>
-        {!this.state.isFormHidden && <Form />}
-        {!this.state.isAboutHidden && <About />}
+          {!this.state.isFormHidden && <Form />}
+          {!this.state.isAboutHidden && <About />}
         </div>
       </div>
     );
